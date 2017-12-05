@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
-
-  $('.addBlinkyDancer').on('click', function(event) {
+  
+  $('.addDancerButton').on('click', function(event) {
     
     
     /* This function sets up the click handlers for the create-dancer
@@ -23,44 +23,17 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    // var dancer = dancerMakerFunction(
-    //   $('body').height() * Math.random(),
-    //   $('body').width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-    
-    var dancer = new makeBlinkyDancer($('body').height() * Math.random(),
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    console.log('dancerMakerFunctionName ', dancerMakerFunctionName );
+    // get the maker function for the kind of dancer we're supposed to make
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+    // make a dancer with a random position
+    var dancer = new dancerMakerFunction($('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000);
-    
     $('body').append(dancer.$node);
   });
-  
-  
-  $('.addPoppingDancer').on('click', function(event) {
-    
-    
-    var dancer = new makePoppingDancer($('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000);
-    
-    $('body').append(dancer.$node);
-  });
-  
-  
-  
-  
-  $('.addShiftingDancer').on('click', function(event) {
-    
-    
-    var dancer = new makeShiftingDancer($('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000);
-    
-    $('body').append(dancer.$node);
-  });
-  
-  
-  
+
 });
+
 
