@@ -1,0 +1,26 @@
+make the dancers clickable
+  onclick
+    1 - grab their top and apply to all the dancers in the global array
+    
+    2 - calculate the padding using the formula:
+      ( doc.width / dancerArray.length - dancer.width ) / 2
+      set that padding on the .css of every dancer's padding value
+    
+    2b - also, consider the left value (maybe use grid / wrapper)
+
+
+think about sorting by types
+
+// select all elements from the dom that match a class
+
+ // store them in an iterable form
+ 
+ //update their values
+ 
+ //exercise suggests using the dancer array
+ 
+ 
+ //make all dancers same class(dancer)
+ //edit the dancer.css.top
+  //automatically changes display of all nodes of that class
+  //if that class is the last class in the css order (overwrites previous properties)

@@ -33,6 +33,11 @@ $(document).ready(function() {
       Math.random() * 1000);
     $('body').append(dancer.$node);
   });
+  
+  
+   // var clickableDancers = $(".dancer").on('click', function(event) {
+   //    alert("Handler for .click() called.");
+   //  }); 
 
 });
 
