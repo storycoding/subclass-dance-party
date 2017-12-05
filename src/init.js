@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addBlinkyDancer').on('click', function(event) {
     
     
     /* This function sets up the click handlers for the create-dancer
@@ -35,5 +35,32 @@ $(document).ready(function() {
     
     $('body').append(dancer.$node);
   });
+  
+  
+  $('.addPoppingDancer').on('click', function(event) {
+    
+    
+    var dancer = new makePoppingDancer($('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000);
+    
+    $('body').append(dancer.$node);
+  });
+  
+  
+  
+  
+  $('.addShiftingDancer').on('click', function(event) {
+    
+    
+    var dancer = new makeShiftingDancer($('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000);
+    
+    $('body').append(dancer.$node);
+  });
+  
+  
+  
 });
 
