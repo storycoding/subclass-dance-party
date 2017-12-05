@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.stars = [];
   
   $('.addDancerButton').on('click', function(event) {
     
@@ -34,6 +35,8 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
   
+  starFall();
+  refresh();
   
    // var clickableDancers = $(".dancer").on('click', function(event) {
    //    alert("Handler for .click() called.");

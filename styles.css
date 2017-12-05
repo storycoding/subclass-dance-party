@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:black;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -23,5 +23,9 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid blue;
   border-radius:50%;
+  position:absolute;
+}
+.star{
+  height: 10%;
   position:absolute;
 }
