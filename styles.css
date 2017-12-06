@@ -21,11 +21,19 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  padding: 5px;
+  /*
   border:10px solid blue;
   border-radius:50%;
+  */
+  height: 20%;
   position:absolute;
 }
 .star{
-  height: 10%;
+  height: 1%;
   position:absolute;
+  
+  
+}.container{
+  display: grid;
 }

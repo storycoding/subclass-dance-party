@@ -10,7 +10,6 @@ makePoppingDancer.prototype = Object.create(makeDancer.prototype);
 
 makePoppingDancer.prototype.constructor = makePoppingDancer;
 
-
 makePoppingDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
      
@@ -26,6 +25,14 @@ makePoppingDancer.prototype.step = function() {
   
   // this.$node.css({left: x, top: y});
   var size = Math.random() * 50;
+  
+  //var newTop = this.$node.css('top') - .5 * size;
+  //selects top selector from CSS, parses to a number, adjusts corner (top, left)
+  //var newTop = +(this.$node.css('top').slice(0, this.$node.css('top').length - 2)) - (.5 * size);
+  //var newLeft = +(this.$node.css('left').slice(0, this.$node.css('left').length - 2)) - (.5 * size);
+  
+  // console.log('css', newTop);
+  // console.log('css', newLeft);
   
   this.$node.css({width: size, height: size});
     
