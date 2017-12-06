@@ -26,14 +26,10 @@ body, a:link, a:visited, a:active{
   border:10px solid blue;
   border-radius:50%;
   */
-  height: 20%;
+  height: 15%;
   position:absolute;
 }
 .star{
   height: 1%;
   position:absolute;
-  
-  
-}.container{
-  display: grid;
 }

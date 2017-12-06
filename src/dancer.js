@@ -1,6 +1,11 @@
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
 
+  if (dancers.length >= 40) {
+    alert('this party is full!');
+    return;
+  }
+  
   this.timeBetweenSteps = timeBetweenSteps;
   // use jQuery to create an HTML <span> tag
   
@@ -55,9 +60,42 @@ makeDancer.prototype.lineUp = function() {
 
 
 lineUp = function() {
-
+  var inc = 200;
+  var topDistance = inc * 1;
+  var leftDistance = inc * 4;
+  
   for (var i = 0; i < dancers.length; i++) {
-    dancers[i].$node.css('top', 300);
+     
+    
+    if (i === 4) {
+      topDistance = inc * 2;
+      leftDistance = inc * 2;
+    }
+    
+    if (i === 12) {
+      topDistance = inc * 3;
+      leftDistance = inc * 2;
+    }
+    
+    if (i === 20) {
+      topDistance = inc * 4;
+      leftDistance = inc;
+    }
+    
+    if (i === 30) {
+      topDistance = inc * 5;
+      leftDistance = inc;
+    }
+    
+    if (i === 40) {
+      topDistance = inc * 6;
+      leftDistance = inc;
+    }
+    
+    dancers[i].$node.css('top', topDistance);
+    dancers[i].$node.css('left', leftDistance);
+    
+    leftDistance += inc;
   }   
 
 };
