@@ -61,8 +61,11 @@ refresh = function() {
   setTimeout(refresh, 3000);
 };
 
+var diveSFX = new Audio();
+diveSFX.src = "audio/dive.wav";
 
-
+var burstSFX = new Audio();
+burstSFX.src = "audio/explosion.wav";
 
 var starSong = new Audio();
 starSong.src = "audio/starMaze.mp3";

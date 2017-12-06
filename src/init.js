@@ -7,6 +7,16 @@ $(document).ready(function() {
     lineUp();
   });
   
+  $('.danceTime').on('click', function(event) {
+    
+    for (var i = 0; i < dancers.length; i++) {
+        
+      //changes every node's src atrribute to match the dancing ones
+        
+    }
+  
+  });
+  
   
   $('.addDancerButton').on('click', function(event) {
   
@@ -44,10 +54,6 @@ $(document).ready(function() {
   starSong.play();
   starFall();
   refresh();
-  
-   // var clickableDancers = $(".dancer").on('click', function(event) {
-   //    alert("Handler for .click() called.");
-   //  }); 
 
 });
 

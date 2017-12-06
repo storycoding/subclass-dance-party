@@ -18,7 +18,14 @@ var makeDancer = function(top, left, timeBetweenSteps) {
     //call lineup from the makeDancer.prototype
     console.dir(this);
     
-    this.lineUp();
+    this.setAttribute("src", "img/firework.gif");
+    
+    burstSFX.play();
+    
+    //also remove it from the dancer array
+    
+    setTimeout(this.remove.bind(this), 1000);
+    console.dir(this);
   });
   
   dancers.push(this);
@@ -33,6 +40,7 @@ makeDancer.prototype.step = function() {
 
 
 makeDancer.prototype.setPosition = function(top, left) {
+  
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   this.originalTop = top; // to be able to revert the node to its original position
@@ -58,8 +66,11 @@ makeDancer.prototype.lineUp = function() {
 
 };
 
-
+//space invader style!
 lineUp = function() {
+  
+  diveSFX.play();
+  
   var inc = 200;
   var topDistance = inc * 1;
   var leftDistance = inc * 4;
@@ -91,6 +102,17 @@ lineUp = function() {
       topDistance = inc * 6;
       leftDistance = inc;
     }
+    
+    
+    
+    //next step, animate! / using stars as an example
+    //this.$node.animate({top: '+=1800'}, 10000, 'linear');
+    
+    //var topString = '=' + topDistance;
+    //var leftString = '=' + leftDistance;
+    
+    //dancers[i].$node.animate({top: topString}, 1000, 'linear');
+    //dancers[i].$node.animate({top: leftString}, 1000, 'linear');
     
     dancers[i].$node.css('top', topDistance);
     dancers[i].$node.css('left', leftDistance);
